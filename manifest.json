@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Youtube Comment Hider",
+  "version": "1.0",
+  "description": "Chrome Extension that allows you to toggle Youtube comments on and off",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "action": {
+    "default_icon": "icon.png",
+    "default_title": "Hide YouTube Comments",
+    "default_popup": "popup.html"
+  }
+}
+
+
